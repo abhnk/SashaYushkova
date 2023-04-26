@@ -17,7 +17,6 @@ public class PokerDeck {
         for (int i = 0; i < cardQuantity; i++) {
             cards[i].suit = cards[i].suitsVar[x];
             cards[i].rank = cards[i].ranksVar[y];
-            cards[i].cardName = cards[i].rank + " " + cards[i].suit;
             y++;
             if (y == cards[i].ranksVar.length) {
                 y = 0;

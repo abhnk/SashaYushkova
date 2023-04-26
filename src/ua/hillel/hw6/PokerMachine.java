@@ -11,11 +11,11 @@ public class PokerMachine {
     static Player[] players;
 
     public static void main(String[] args) {
-        StartGame();
+        startGame();
 
     }
 
-    public static void CardsDeal(Player player) {
+    public static void cardsDeal(Player player) {
         System.out.println("Карти для гравця " + player.name + ":");
         for (int i = 0; i < player.hand.length; i++) {
             int x = random.nextInt(51);
@@ -24,19 +24,19 @@ public class PokerMachine {
             }
             player.hand[i] = pokerDeck.cards[x];
             pokerDeck.cards[x].deal = true;
-            System.out.println("Гравець " + player.name + " отримує карту: " + player.hand[i].cardName);
+            System.out.println("Гравець " + player.name + " отримує карту: " + player.hand[i]);
         }
         System.out.println();
     }
 
-    public static void StartGame() {
+    public static void startGame() {
         players = new Player[4];
         String[] names = {"Олег", "Іван", "Петро", "Віктор"};
         for (int i = 0; i < players.length; i++) {
             players[i] = new Player();
             players[i].name = names[i];
-            CardsDeal(players[i]);
-            players[i].turn = i;
+            cardsDeal(players[i]);
+            players[i].playerTurn = i;
         }
 
     }
