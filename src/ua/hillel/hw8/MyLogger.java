@@ -10,7 +10,7 @@ public class MyLogger {
     }
 
     public static void main(String[] args) {
-        MyLogger.log(LogLevel.ERROR, "This is an debug message");
+        MyLogger.log(LogLevel.ERROR, "This is an error message");
 
     }
 
