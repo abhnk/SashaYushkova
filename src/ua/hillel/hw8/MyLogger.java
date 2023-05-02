@@ -9,9 +9,16 @@ public class MyLogger {
         LOGGER.log(level.getLevel(), level.getColorCode() + message + "\u001B[0m");
     }
 
+    public static void main(String[] args) {
+        MyLogger.log(LogLevel.ERROR, "This is an debug message");
+
+    }
+
+
+
     public enum LogLevel {
         INFO("\u001B[32m", Level.INFO),
-        DEBUG("\u001B[34m", Level.FINE),
+        DEBUG("\u001B[36m", Level.FINE),
         WARN("\u001B[33m", Level.WARNING),
         ERROR("\u001B[31m", Level.SEVERE);
 
