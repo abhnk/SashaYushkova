@@ -1,16 +1,14 @@
 package ua.hillel.hw10;
-
-
-import ua.hillel.hw6.Card;
+import ua.hillel.hw10.Card;
 
 public class PokerDeck {
 
     int cardQuantity = 52;
-    ua.hillel.hw6.Card[] cards;
+    ua.hillel.hw10.Card[] cards;
 
 
     public PokerDeck() {
-        cards = new ua.hillel.hw6.Card[cardQuantity];
+        cards = new ua.hillel.hw10.Card[cardQuantity];
         for (int i = 0; i < cards.length; i++){
             cards[i] = new Card();
             cards[i].deal = false;
