@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Test Suite">
+
+    <test name="Login Test">
+        <groups>
+            <run>
+                <include name="login" />
+                <include name="dependent" />
+            </run>
+        </groups>
+        <classes>
+            <class name="ua.hillel.tests.LoginTest" />
+            <class name="ua.hillel.tests.DependentTest" />
+        </classes>
+    </test>
+
+    <test name="Parameter Test">
+        <parameter name="url" value="playstation.com" />
+        <parameter name="browser" value="Safari" />
+        <classes>
+            <class name="ua.hillel.tests.ParameterTest" />
+        </classes>
+    </test>
+
+</suite>
+
+
