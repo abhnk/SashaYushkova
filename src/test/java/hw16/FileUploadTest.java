@@ -24,7 +24,7 @@ public class FileUploadTest {
     public void setUp() {
         ChromeOptions options = new ChromeOptions();
         Map<String, Object> prefs = new HashMap<>();
-        prefs.put("download.default_directory", "target/test-classes");
+        prefs.put("download.default_directory", new File("target/test-classes").getAbsolutePath());
         options.setExperimentalOption("prefs", prefs);
         driver = new ChromeDriver(options);
     }

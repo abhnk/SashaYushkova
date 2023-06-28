@@ -15,9 +15,15 @@
         <testngVersion>6.14.3</testngVersion>
         <seleniumVersion>4.9.1</seleniumVersion>
         <wdVersion>5.3.3</wdVersion>
+        <selenideVersion>6.15.0</selenideVersion>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>selenide</artifactId>
+            <version>${selenideVersion}</version>
+        </dependency>
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -33,6 +39,12 @@
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>${wdVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
