@@ -15,15 +15,13 @@ public class StoreApiTest {
     public void setUp() {
         storeApi = new StoreApi();
     }
-
-    @Test
+    @Test(priority = 1)
     public void testGetInventory() throws IOException {
         JSONObject jsonObject = new JSONObject(storeApi.getInventory().body().string());
         int availableItems = jsonObject.getInt("availableItems");
         Assert.assertTrue(availableItems > 0, "There should be available items in the inventory");
     }
-
-    @Test
+    @Test(priority = 2)
     public void testCreateOrder() throws IOException {
         JSONObject requestBody = new JSONObject();
         requestBody.put("id", 10);
@@ -36,16 +34,14 @@ public class StoreApiTest {
         int orderId = jsonObject.getInt("id");
         Assert.assertNotNull(orderId, "Order ID should not be null");
     }
-
-    @Test
+    @Test(priority = 3)
     public void testGetOrderById() throws IOException {
         int orderId = 10;
         JSONObject jsonObject = new JSONObject(storeApi.getOrderById(orderId).body().string());
         int retrievedOrderId = jsonObject.getInt("id");
         Assert.assertEquals(retrievedOrderId, orderId, "Retrieved order ID should match the requested order ID");
     }
-
-    @Test
+    @Test(priority = 4)
     public void testDeleteOrder() throws IOException {
         int orderId = 10;
         int statusCode = storeApi.deleteOrder(orderId).code();

@@ -3,7 +3,7 @@ import okhttp3.*;
 
 import java.io.IOException;
 public class StoreApi {
-    private static final String BASE_URL = "https://petstore3.swagger.io/v3";
+    private static final String BASE_URL = "https://petstore3.swagger.io/api/v3";
 
     private OkHttpClient client;
     private MediaType mediaType;
