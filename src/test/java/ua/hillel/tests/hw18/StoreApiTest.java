@@ -1,5 +1,4 @@
-package hw18;
-import org.json.JSONException;
+package ua.hillel.tests.hw18;
 import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
