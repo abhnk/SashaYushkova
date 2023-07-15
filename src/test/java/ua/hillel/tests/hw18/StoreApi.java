@@ -1,4 +1,4 @@
-package hw18;
+package ua.hillel.tests.hw18;
 import okhttp3.*;
 
 import java.io.IOException;

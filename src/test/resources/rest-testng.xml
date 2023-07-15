@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Rest Api Suite">
+
+
+    <test name="Api Test">
+        <classes>
+            <class name="ua.hillel.tests.hw18.StoreApiTest" />
+        </classes>
+    </test>
+
+</suite>
+
+
