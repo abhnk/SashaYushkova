@@ -67,7 +67,7 @@
                 <version>3.1.0</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>/Users/Sanya/IdeaProjects/ua.hillel/scr/test/resources/rest-testng.xml</suiteXmlFile>
+                        <suiteXmlFile>ua.hillel/src/test/resources</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
