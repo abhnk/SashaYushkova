@@ -5,7 +5,7 @@
 
     <test name="Api Test">
         <classes>
-            <class name="ua.hillel.tests.hw18.StoreApiTest" />
+            <class name="ua.hillel.tests.hw18.StoreApi" />
         </classes>
     </test>
 
