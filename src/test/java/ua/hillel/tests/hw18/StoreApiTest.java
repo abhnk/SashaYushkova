@@ -14,7 +14,6 @@ public class StoreApiTest {
     public void setUp() {
         storeApi = new StoreApi();
     }
-    @Test(priority = 1)
     public void testGetInventory() throws IOException {
         JSONObject jsonObject = new JSONObject(storeApi.getInventory().body().string());
         int availableItems = jsonObject.getInt("availableItems");
