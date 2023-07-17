@@ -12,7 +12,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <testngVersion>6.14.3</testngVersion>
+        <testngVersion>7.7.0</testngVersion>
         <seleniumVersion>4.9.1</seleniumVersion>
         <wdVersion>5.3.3</wdVersion>
         <selenideVersion>6.15.0</selenideVersion>
@@ -54,7 +54,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>RELEASE</version>
+            <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
