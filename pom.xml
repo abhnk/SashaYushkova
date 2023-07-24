@@ -12,14 +12,20 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <testngVersion>7.7.0</testngVersion>
+        <testngVersion>6.14.3</testngVersion>
         <seleniumVersion>4.9.1</seleniumVersion>
         <wdVersion>5.3.3</wdVersion>
         <selenideVersion>6.15.0</selenideVersion>
         <okhttpVersion>4.10.0</okhttpVersion>
+        <ERVersion>1.2.2</ERVersion>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports-testng-adapter</artifactId>
+            <version>${ERVersion}</version>
+        </dependency>
         <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
@@ -67,8 +73,8 @@
                 <version>3.1.0</version>
                 <configuration>
                     <suiteXmlFiles>
+                        <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
                         <suiteXmlFile>src/test/resources/rest-testng.xml</suiteXmlFile>
-
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
