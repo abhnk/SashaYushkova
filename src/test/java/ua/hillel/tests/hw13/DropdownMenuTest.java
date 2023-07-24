@@ -1,4 +1,4 @@
-package hw13;
+package ua.hillel.tests.hw13;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -9,10 +9,12 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import ua.hillel.tests.listeners.CustomExtentReportListener;
 
 import java.util.List;
-
+@Listeners({CustomExtentReportListener.class})
 public class DropdownMenuTest {
     @Test
     public void dropDownMenuTest() {
@@ -30,7 +32,7 @@ public class DropdownMenuTest {
         new Actions(driver).moveToElement(secondaryMenu).perform();
         secondaryMenu.click();
 
-        WebElement secondaryAction = driver.findElement(By.cssSelector(".dropdown-menu.secondary"));
+        WebElement secondaryAction = driver.findElement(By.cssSelector(".dropdown-menu.secondariy"));
         new Actions(driver).moveToElement(secondaryAction).perform();
         secondaryAction.click();
 
